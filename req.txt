@@ -1,0 +1,14 @@
+* 清洗nginx access.log中以下指标
+	* 来源ip
+	* 访问设备（例如：Mozilla/5.0 (Linux; Android 8.0; SM-G9600 Build/R16NW; wv）不用太细，区别是Android 还是 IOS 还是pc就行
+	* 请求地址
+	* 请求时间
+	* 请求返回码
+* 筛选出非正常返回的请求
+* 请求地址访问次数排序
+* 访问设备分类排序
+* 来源ip Top5 排序
+
+66.249.64.21 - - [01/Aug/2018:03:15:11 +0800] "GET / HTTP/1.1" 200 11547 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" "-"
+66.249.64.20 - - [01/Aug/2018:03:15:11 +0800] "GET /robots.txt HTTP/1.1" 404 169 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" "-"
+116.249.137.240 - - [01/Aug/2018:03:15:19 +0800] "GET /api/shop_orders/cashier_orders/?status=0&page=1&pae_size=500 HTTP/1.1" 200 65 "-" "okhttp/3.6.0" "-"
